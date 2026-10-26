@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-10-26T08:26:32.230Z",
+  "browser": "内置浏览器",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "contentWidth": 1430,
+      "screenshot": [
+        1430,
+        993
+      ]
+    },
+    {
+      "width": 834,
+      "height": 1180,
+      "contentWidth": 824,
+      "screenshot": [
+        824,
+        1166
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "contentWidth": 380,
+      "screenshot": [
+        380,
+        822
+      ]
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "contentWidth": 310
+    }
+  ],
+  "passed": [
+    "三端实际运行与滚动，未发现横向溢出",
+    "手机菜单背景锁定、Escape关闭和滚动恢复",
+    "本地表单无效与有效邮箱分支",
+    "文章切换语言保留页面、查询和锚点",
+    "更新导航、文章、隐私页",
+    "循环暂停位置不变、拖拽280px后不误跳转、恢复后继续运动",
+    "最新清洁会话控制台无错误或警告"
+  ],
+  "httpPaths": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/updates",
+      "status": 200
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200
+    },
+    {
+      "path": "/updates/dark-mode-is-here",
+      "status": 200
+    },
+    {
+      "path": "/updates/sync-got-twice-as-fast",
+      "status": 200
+    },
+    {
+      "path": "/updates/second-beta-invite-wave",
+      "status": 200
+    },
+    {
+      "path": "/updates/first-testflight-build",
+      "status": 200
+    },
+    {
+      "path": "/en/",
+      "status": 200
+    },
+    {
+      "path": "/en/updates",
+      "status": 200
+    },
+    {
+      "path": "/en/privacy-policy",
+      "status": 200
+    },
+    {
+      "path": "/en/updates/dark-mode-is-here",
+      "status": 200
+    },
+    {
+      "path": "/en/updates/sync-got-twice-as-fast",
+      "status": 200
+    },
+    {
+      "path": "/en/updates/second-beta-invite-wave",
+      "status": 200
+    },
+    {
+      "path": "/en/updates/first-testflight-build",
+      "status": 200
+    }
+  ],
+  "limitations": [
+    "未完成所有页面、语言与三端动效的逐帧完整对照；不声明像素级或完整逐帧复刻验收通过。",
+    "PC 已实测循环位移、暂停、280px 拖拽及续播；移动菜单、Escape、表单错误与本地成功、文章语言切换已实测。悬停减速和系统减少动态效果设置尚未逐项实际切换验收。",
+    "使用原生滚动与 CSS 平滑滚动；未引入参考站 Lenis 滚动引擎。滚动视差阈值和拖拽释放惯性仍需进一步对照。",
+    "参考站设计与图片素材商业再分发许可未核实；listed=false，不代表已取得商业授权。"
+  ]
+}

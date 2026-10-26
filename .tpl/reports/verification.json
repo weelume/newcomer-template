@@ -1,0 +1,85 @@
+{
+  "$schema": "../schemas/verification.schema.json",
+  "format": "git-template-verification",
+  "formatVersion": "0.2.0",
+  "status": "passed",
+  "checkedAt": "2026-10-26T08:26:32.169Z",
+  "sourceCommit": "fb3830a2cf8807760d7229419968a54d67eff5cb",
+  "sourceDigest": "cd85843c7b7e5c3cd7d7ab1d1d29cc658d60ab72d5c05d201792918a8d455420",
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.16.0",
+    "packageManager": "pnpm@9.15.4",
+    "cleanDirectory": true,
+    "localGitClone": true
+  },
+  "checks": [
+    {
+      "id": "typecheck",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "typecheck"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T08:23:19.289Z",
+      "finishedAt": "2026-10-26T08:23:23.491Z"
+    },
+    {
+      "id": "lint",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "lint"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T08:23:23.491Z",
+      "finishedAt": "2026-10-26T08:23:25.751Z"
+    },
+    {
+      "id": "test",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T08:23:25.751Z",
+      "finishedAt": "2026-10-26T08:23:26.394Z"
+    },
+    {
+      "id": "build",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "build"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T08:23:26.394Z",
+      "finishedAt": "2026-10-26T08:23:41.335Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "web",
+      "status": "passed",
+      "stopped": true,
+      "checkedAt": "2026-10-26T08:25:11.349Z"
+    }
+  ],
+  "limitations": [
+    "未完成所有页面、语言与三端动效的逐帧完整对照；不声明像素级或完整逐帧复刻验收通过。",
+    "PC 已实测循环位移、暂停、280px 拖拽及续播；移动菜单、Escape、表单错误与本地成功、文章语言切换已实测。悬停减速和系统减少动态效果设置尚未逐项实际切换验收。",
+    "使用原生滚动与 CSS 平滑滚动；未引入参考站 Lenis 滚动引擎。滚动视差阈值和拖拽释放惯性仍需进一步对照。",
+    "参考站设计与图片素材商业再分发许可未核实；listed=false，不代表已取得商业授权。"
+  ]
+}
