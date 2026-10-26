@@ -1,0 +1,12 @@
+'use client'
+import {motion,useAnimationFrame,useMotionValue,useReducedMotion} from 'framer-motion'
+import {useEffect,useRef,useState,type ReactNode} from 'react'
+import type {Locale} from '../content/data'
+export function Ticker({children,speed=30,reverse=false,draggable=false,locale}:{children:ReactNode;speed?:number;reverse?:boolean;draggable?:boolean;locale:Locale}){
+ const reduced=useReducedMotion(),x=useMotionValue(0),group=useRef<HTMLDivElement>(null),width=useRef(0),hover=useRef(false),dragging=useRef(false),suppressClick=useRef(false),[paused,setPaused]=useState(false)
+ useEffect(()=>{if(!group.current)return;const element=group.current,observer=new ResizeObserver(()=>{width.current=element.getBoundingClientRect().width});observer.observe(element);return()=>observer.disconnect()},[])
+ useEffect(()=>{group.current?.parentElement?.querySelectorAll<HTMLElement>('[data-nc-duplicate] a,[data-nc-duplicate] button').forEach(element=>element.tabIndex=-1)},[children])
+ // 每帧按像素速度移动，宽度来自实际内容；拖拽释放后从当前位置续播，避免归零跳帧。
+ useAnimationFrame((_time,delta)=>{if(reduced||paused||dragging.current||!width.current)return;const period=width.current,value=x.get()+(reverse?1:-1)*speed*(hover.current&&draggable?.5:1)*Math.min(delta,50)/1000;x.set(((value%period)+period)%period-period)})
+ return <div className={'nc-ticker '+(draggable?'nc-ticker-draggable':'')} onMouseEnter={()=>hover.current=true} onMouseLeave={()=>hover.current=false} onFocus={()=>hover.current=true} onBlur={()=>hover.current=false}>{draggable&&<button type="button" className="nc-ticker-control" onClick={()=>setPaused(!paused)} aria-pressed={paused}>{locale==='zh'?(paused?'继续滚动':'暂停滚动'):(paused?'Resume motion':'Pause motion')}</button>}<motion.div onPointerDownCapture={()=>{suppressClick.current=false}} onClickCapture={event=>{if(suppressClick.current){event.preventDefault();event.stopPropagation();suppressClick.current=false}}} className="nc-ticker-track" style={reduced?{}:{x}} drag={draggable&&!reduced?'x':false} dragMomentum={false} onDragStart={()=>{dragging.current=true;suppressClick.current=true;console.debug('[newcomer] ticker drag started')}} onDragEnd={()=>{dragging.current=false;console.debug('[newcomer] ticker drag ended',{x:x.get()})}}><div ref={group} className="nc-ticker-group">{children}</div>{!reduced&&<><div className="nc-ticker-group" aria-hidden="true" data-nc-duplicate>{children}</div><div className="nc-ticker-group" aria-hidden="true" data-nc-duplicate>{children}</div></>}</motion.div></div>
+}

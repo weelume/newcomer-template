@@ -1,0 +1,3 @@
+import Link from 'next/link'
+import {t,updates,type Locale} from '../content/data'
+export function UpdateCard({item,basePath,locale}:{item:typeof updates[number];basePath:string;locale:Locale}){return <Link draggable={false} className="nc-update-card nc-glass" href={basePath+'/updates/'+item.slug}><span className="nc-build"><i/>{locale==='zh'?'版本':'Build'} {item.version}</span><div className="nc-update-copy"><time dateTime={item.date}>{new Date(item.date+'T12:00:00Z').toLocaleDateString(locale==='zh'?'zh-CN':'en-US',{year:'numeric',month:locale==='zh'?'long':'short',day:'numeric',timeZone:'UTC'})}</time><h3>{t(item.title,locale)}</h3><p>{t(item.summary,locale)}</p></div></Link>}

@@ -1,0 +1,208 @@
+{
+  "$schema": "./schemas/template.schema.json",
+  "format": "git-template",
+  "formatVersion": "0.2.0",
+  "id": "newcomer",
+  "version": "1.0.0",
+  "gitUrl": "https://github.com/weelume/newcomer-template",
+  "name": "新序 · 随身 AI 助手",
+  "localizedNames": {
+    "en": "Newcomer · Your everyday AI companion"
+  },
+  "summary": "轻盈黑白设计的 AI 手机助手官网，含视差功能卡片、双向应用循环带、可拖拽更新轮播、四篇更新详情和隐私政策。",
+  "sceneId": "landing-page",
+  "listed": false,
+  "tags": [
+    "AI 助手",
+    "候补名单",
+    "极简",
+    "双语",
+    "视差动效"
+  ],
+  "stack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Framer Motion"
+  ],
+  "accentColor": "#141413",
+  "cover": "assets/desktop-home.webp",
+  "screenshots": [
+    {
+      "src": "assets/desktop-features.webp",
+      "alt": "功能区 · desktop",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/desktop-home.webp",
+      "alt": "首页 · desktop",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/desktop-join.webp",
+      "alt": "候补名单 · desktop",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/desktop-updates.webp",
+      "alt": "更新日志 · desktop",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": "updates"
+    },
+    {
+      "src": "assets/mobile-features.webp",
+      "alt": "功能区 · mobile",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/mobile-home.webp",
+      "alt": "首页 · mobile",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/mobile-join.webp",
+      "alt": "候补名单 · mobile",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/mobile-updates.webp",
+      "alt": "更新日志 · mobile",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": "updates"
+    },
+    {
+      "src": "assets/tablet-features.webp",
+      "alt": "功能区 · tablet",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/tablet-home.webp",
+      "alt": "首页 · tablet",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/tablet-join.webp",
+      "alt": "候补名单 · tablet",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/tablet-updates.webp",
+      "alt": "更新日志 · tablet",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": "updates"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "site",
+      "name": "产品官网",
+      "platform": "pc",
+      "locales": [
+        "zh",
+        "en"
+      ],
+      "pages": [
+        {
+          "slug": "",
+          "title": "首页",
+          "localizedTitles": {
+            "en": "Home"
+          }
+        },
+        {
+          "slug": "updates",
+          "title": "更新日志",
+          "localizedTitles": {
+            "en": "Updates"
+          }
+        },
+        {
+          "slug": "updates/dark-mode-is-here",
+          "title": "深色模式来了",
+          "localizedTitles": {
+            "en": "Dark mode is here"
+          }
+        },
+        {
+          "slug": "updates/sync-got-twice-as-fast",
+          "title": "同步速度翻倍",
+          "localizedTitles": {
+            "en": "Sync got twice as fast"
+          }
+        },
+        {
+          "slug": "updates/second-beta-invite-wave",
+          "title": "第二批内测邀请",
+          "localizedTitles": {
+            "en": "Second beta invite wave"
+          }
+        },
+        {
+          "slug": "updates/first-testflight-build",
+          "title": "首个 TestFlight 版本",
+          "localizedTitles": {
+            "en": "First TestFlight build"
+          }
+        },
+        {
+          "slug": "privacy-policy",
+          "title": "隐私政策",
+          "localizedTitles": {
+            "en": "Privacy Policy"
+          }
+        }
+      ]
+    }
+  ],
+  "license": {
+    "type": "restricted",
+    "file": "docs/LICENSE.md",
+    "summary": "参考设计、图片和应用示意素材的商业再分发许可尚未核实；不声明取得商业授权。",
+    "redistributionAllowed": false
+  }
+}

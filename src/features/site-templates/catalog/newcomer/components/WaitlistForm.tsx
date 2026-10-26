@@ -1,0 +1,11 @@
+'use client'
+import {useId,useState,type FormEvent} from 'react'
+import {motion,useReducedMotion} from 'framer-motion'
+import {asset} from '../config/brand'
+import {copy,t,type Locale} from '../content/data'
+const avatars=['9UiRZoJSzyjRBmnne80ZRloYrM.webp','ibdj1mxNVbyQgspBkjmyMPcN54.webp','biQjYswXEN9K90MKw62PSb63IQ.webp','dsJtsg6APGJz9uLzqtB3jLWMzjk.webp']
+export function WaitlistForm({locale}:{locale:Locale}){
+ const id=useId(),reduced=useReducedMotion(),[status,setStatus]=useState<'idle'|'error'|'success'>('idle')
+ function submit(event:FormEvent<HTMLFormElement>){event.preventDefault();const input=new FormData(event.currentTarget).get('email');const valid=typeof input==='string'&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);setStatus(valid?'success':'error');console.debug('[newcomer] waitlist local validation',{valid,submitted:false,saved:false})}
+ return <div className="nc-waitlist"><form onSubmit={submit} noValidate aria-label={t(copy.join,locale)}><label className="nc-sr" htmlFor={id}>{t(copy.email,locale)}</label><input id={id} name="email" type="email" autoComplete="email" placeholder="you@example.com" required aria-invalid={status==='error'} aria-describedby={id+'-status'} onChange={()=>setStatus('idle')}/><motion.button whileHover={reduced?{}:{scale:1.02}} whileTap={reduced?{}:{scale:.97}} className="nc-button" type="submit">{t(copy.join,locale)}</motion.button></form><div className="nc-social-proof"><div className="nc-avatars">{avatars.map((image,index)=><motion.img initial={reduced?false:{opacity:0,x:-10}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{type:'spring',bounce:0,duration:1,delay:.5+index*.05}} whileHover={reduced?{}:{y:-4}} key={image} src={asset(image)} alt={locale==='zh'?`候补用户 ${index+1}`:`Waitlist member ${index+1}`} width="28" height="28"/>)}</div><motion.span initial={reduced?false:{opacity:0,x:-10}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{type:'spring',bounce:0,duration:1,delay:.7}}>{t(copy.count,locale)}</motion.span></div><p className={'nc-form-status '+(status==='error'?'nc-error':'')} id={id+'-status'} role="status">{t(status==='success'?copy.success:status==='error'?copy.error:copy.demo,locale)}</p></div>
+}
