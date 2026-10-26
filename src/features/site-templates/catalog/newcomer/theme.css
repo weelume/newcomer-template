@@ -32,3 +32,5 @@ html[data-newcomer],.nc-site,.nc-section,.nc-feature-phone,.nc-apps-phone{positi
 .nc-hero-media{height:100%;width:auto;aspect-ratio:1306/1205}.nc-hero-media>img{width:100%;height:100%}@media(min-width:1200px){.nc-hero-hand{right:0;height:100%;bottom:0}}@media(min-width:810px) and (max-width:1199px){.nc-hero{height:auto;min-height:900px;max-height:none}.nc-hero-inner{min-height:900px;display:block}.nc-hero-copy{width:60%;padding-top:80px;padding-bottom:0}.nc-hero-hand{right:0;bottom:-10px;width:90%;height:70%}}
 
 .nc-ticker-draggable .nc-update-card{user-select:none;-webkit-user-drag:none}
+
+.nc-site[lang=en] .nc-brand.nc-brand-host{font:400 18px/1.3 NCPoppins,sans-serif;letter-spacing:0}
