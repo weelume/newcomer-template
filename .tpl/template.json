@@ -3,7 +3,7 @@
   "format": "git-template",
   "formatVersion": "0.2.0",
   "id": "newcomer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "gitUrl": "https://github.com/weelume/newcomer-template",
   "name": "新序 · 随身 AI 助手",
   "localizedNames": {

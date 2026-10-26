@@ -39,8 +39,8 @@
     "src": "assets/mobile-features.webp",
     "alt": "功能区 · mobile",
     "device": "mobile",
-    "width": 380,
-    "height": 822,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": ""
   },
@@ -48,8 +48,8 @@
     "src": "assets/mobile-home.webp",
     "alt": "首页 · mobile",
     "device": "mobile",
-    "width": 380,
-    "height": 822,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": ""
   },
@@ -57,8 +57,8 @@
     "src": "assets/mobile-join.webp",
     "alt": "候补名单 · mobile",
     "device": "mobile",
-    "width": 380,
-    "height": 822,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": ""
   },
@@ -66,8 +66,8 @@
     "src": "assets/mobile-updates.webp",
     "alt": "更新日志 · mobile",
     "device": "mobile",
-    "width": 380,
-    "height": 822,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": "updates"
   },
@@ -75,8 +75,8 @@
     "src": "assets/tablet-features.webp",
     "alt": "功能区 · tablet",
     "device": "tablet",
-    "width": 824,
-    "height": 1166,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": ""
   },
@@ -84,8 +84,8 @@
     "src": "assets/tablet-home.webp",
     "alt": "首页 · tablet",
     "device": "tablet",
-    "width": 824,
-    "height": 1166,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": ""
   },
@@ -93,8 +93,8 @@
     "src": "assets/tablet-join.webp",
     "alt": "候补名单 · tablet",
     "device": "tablet",
-    "width": 824,
-    "height": 1166,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": ""
   },
@@ -102,8 +102,8 @@
     "src": "assets/tablet-updates.webp",
     "alt": "更新日志 · tablet",
     "device": "tablet",
-    "width": 824,
-    "height": 1166,
+    "width": 1430,
+    "height": 993,
     "surfaceId": "site",
     "pageSlug": "updates"
   }
